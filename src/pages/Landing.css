@@ -1,0 +1,78 @@
+.landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 150px;
+}
+
+.landing .landing-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  margin-right: 5rem;
+}
+
+.landing .landing-left .landing-logo {
+  filter: drop-shadow(0px 5px 8px #a4a1d4);
+}
+
+.landing .landing-left .landing-title {
+  font-style: normal;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.landing .landing-left .landing-description {
+  font-size: 15px;
+  line-height: 25px;
+
+  color: #6a6a6a;
+}
+
+.landing .landing-left .landing-button {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  list-style-type: none;
+  color: #ffffff;
+}
+
+.landing .landing-left .landing-button button {
+  width: 135px;
+  height: 40px;
+  left: 135px;
+  background: linear-gradient(
+    90deg,
+    #4dd4f7 0%,
+    #9090fb 36.46%,
+    #ff6b81 71.35%,
+    #fbdf63 100%
+  );
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+.landing .landing-left .landing-button li {
+  padding-top: 7px;
+  font-weight: 200;
+}
+
+.landing .landing-left .landing-button li,
+button {
+  cursor: pointer;
+}
+
+.landing .landing-right {
+  flex: 2;
+  color: #ffffff;
+}
+
+.landing .landing-right .landing-image {
+  border: 1px floralwhite solid;
+}
