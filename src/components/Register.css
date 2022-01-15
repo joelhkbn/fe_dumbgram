@@ -1,0 +1,54 @@
+.modal .modal-content {
+  background: #1f1f1f;
+  color: white;
+}
+.modal h2 {
+  font-size: 36px;
+  padding-top: 8px;
+  padding-bottom: 15px;
+}
+
+.form .form-control {
+  color: #e7e7e7;
+  background-color: #d2d2d240;
+}
+
+.form .form-control:focus {
+  color: #f1eded;
+  background-color: #d2d2d240;
+  outline: 0;
+  border: 1px solid white;
+  box-shadow: none;
+}
+
+.form button {
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+  left: 135px;
+  background: linear-gradient(
+    90deg,
+    #4dd4f7 0%,
+    #9090fb 36.46%,
+    #ff6b81 71.35%,
+    #fbdf63 100%
+  );
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bolder;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.form p {
+  margin: 10px;
+  margin-left: 25px;
+  color: #cbcbcb;
+  font-size: small;
+}
+
+.form p a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
