@@ -1,38 +1,38 @@
 import '../components/Login.css'
 import React, { useState } from 'react'
 import { Modal, Form, Button } from 'react-bootstrap'
+import Register from './Register'
 
 const Login = (props) => {
-  const [show, setShow] = useState(false)
-  const handleClose = () => setShow(false)
+  const [shows, setShows] = useState(false)
+  const handleClose = () => setShows(false)
 
   return (
-    <>
-      <Modal
-        {...props}
-        size='sm'
-        aria-labelledby='contained-modal-title-vcenter'
-        centered
-      >
-        <Form className='m-3'>
-          <Form.Group className='mb-3' controlId='formBasicEmail'>
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type='email' placeholder='Enter email' />
-            <Form.Text className='text-muted'>
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
+    <Modal
+      {...props}
+      size='sm'
+      aria-labelledby='contained-modal-title-vcenter'
+      centered
+      className='modal'
+    >
+      <Form className='form m-4'>
+        <h2>Login</h2>
+        <Form.Group className='mb-3' controlId='formBasicEmail'>
+          <Form.Control type='email' placeholder='Email' />
+        </Form.Group>
 
-          <Form.Group className='mb-3' controlId='formBasicPassword'>
-            <Form.Label>Password</Form.Label>
-            <Form.Control type='password' placeholder='Password' />
-          </Form.Group>
-          <Button variant='primary' type='submit' onClick={handleClose}>
-            Submit
-          </Button>
-        </Form>
-      </Modal>
-    </>
+        <Form.Group className='mb-3' controlId='formBasicPassword'>
+          <Form.Control type='password' placeholder='Password' />
+        </Form.Group>
+        <Button type='submit' onClick={handleClose}>
+          Login
+        </Button>
+        <p>
+          Don't have an account? Click <a onClick={Register}>Here</a>
+        </p>
+      </Form>
+      <Register />
+    </Modal>
   )
 }
 

@@ -4,14 +4,20 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Logo from '../assets/logoLarge.svg'
 import Gallery from '../components/Gallery'
 import Login from '../components/Login'
+import Register from '../components/Register'
 
 const Landing = (props) => {
-  const [showState, setShowState] = useState(false)
+  const [showLogin, setShowLogin] = useState(false)
+  const [showRegister, setShowRegister] = useState(false)
 
-  const handleClose = () => setShowState(false)
+  const handleCloseLogin = () => setShowLogin(false)
+  const handleCloseRegister = () => setShowRegister(false)
 
-  const handleShow = () => {
-    setShowState((showState) => (showState = !showState))
+  const handleShowLogin = () => {
+    setShowLogin((showLogin) => (showLogin = !showLogin))
+  }
+  const handleShowRegister = () => {
+    setShowRegister((showRegister) => (showRegister = !showRegister))
   }
 
   return (
@@ -26,13 +32,14 @@ const Landing = (props) => {
                 Join now, share your creations with another people and enjoy
                 other creations.{' '}
               </p>
-              <button className='mt-4 mr-4' onClick={handleShow}>
+              <button className='mt-4 mr-4' onClick={handleShowLogin}>
                 Login
               </button>
-              <a className='ml-5' href=''>
+              <a className='ml-5' onClick={handleShowRegister}>
                 Register
               </a>
-              <Login show={showState} onHide={handleClose} />
+              <Login show={showLogin} onHide={handleCloseLogin} />
+              <Register show={showRegister} onHide={handleCloseRegister} />
             </div>
           </Col>
           <Col md={7}>
