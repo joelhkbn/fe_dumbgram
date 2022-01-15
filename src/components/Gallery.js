@@ -1,19 +1,27 @@
 import React from 'react'
-import Masonry from 'react-masonry-component'
+import Masonry from 'react-masonry-css'
 import '../components/Gallery.css'
+import images from '../assets/data/dataImages'
 
 function Gallery() {
-  const images = ['../assets/gallery/img(1).jpg']
+  const importer = images
+  const Columns = {
+    default: 3,
+    1000: 2,
+    700: 1,
+  }
 
   return (
     <div>
       <Masonry
-        breakpointCols={3}
+        breakpointCols={Columns}
         className='my-masonry-grid'
         columnClassName='my-masonry-grid_column'
       >
-        {images.map((image) => (
-          <img src={image} alt='images' />
+        {importer.map((image, index) => (
+          <div>
+            <img src={image.url} alt='images' key={index} />
+          </div>
         ))}
       </Masonry>
     </div>
