@@ -1,9 +1,5 @@
-.landing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  margin: 150px;
+.all {
+  /* background-color: black; */
 }
 
 .landing .landing-left {
@@ -16,18 +12,18 @@
   margin-right: 5rem;
 }
 
-.landing .landing-left .landing-logo {
+.sect-left img {
   filter: drop-shadow(0px 5px 8px #a4a1d4);
 }
 
-.landing .landing-left .landing-title {
+.sect-left h1 {
   font-style: normal;
-  font-size: 20px;
+  font-size: 50px;
   color: #ffffff;
 }
 
-.landing .landing-left .landing-description {
-  font-size: 15px;
+.sect-left p {
+  font-size: 20px;
   line-height: 25px;
 
   color: #6a6a6a;
@@ -42,7 +38,7 @@
   color: #ffffff;
 }
 
-.landing .landing-left .landing-button button {
+.sect-left button {
   width: 135px;
   height: 40px;
   left: 135px;
@@ -56,6 +52,14 @@
   border-radius: 5px;
   color: #ffffff;
   font-weight: bolder;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.sect-left a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .landing .landing-left .landing-button li {
