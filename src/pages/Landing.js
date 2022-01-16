@@ -4,20 +4,24 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Logo from '../assets/logoLarge.svg'
 import Gallery from '../components/Gallery'
 import Login from '../components/Login'
-import Register from '../components/Register'
 
 const Landing = (props) => {
   const [showLogin, setShowLogin] = useState(false)
   const [showRegister, setShowRegister] = useState(false)
 
   const handleCloseLogin = () => setShowLogin(false)
-  const handleCloseRegister = () => setShowRegister(false)
+
+  const handleShowOrHideRegister = () => {
+    setShowRegister((showRegister) => (!showRegister))
+  }
 
   const handleShowLogin = () => {
+    setShowRegister((showRegister) => (false));
     setShowLogin((showLogin) => (showLogin = !showLogin))
   }
   const handleShowRegister = () => {
-    setShowRegister((showRegister) => (showRegister = !showRegister))
+    setShowRegister((showRegister) => (true));
+    setShowLogin((showLogin) => (showLogin = !showLogin));
   }
 
   return (
@@ -38,8 +42,12 @@ const Landing = (props) => {
               <a className='ml-5' onClick={handleShowRegister}>
                 Register
               </a>
-              <Login show={showLogin} onHide={handleCloseLogin} />
-              <Register show={showRegister} onHide={handleCloseRegister} />
+              <Login 
+                show={showLogin}  
+                isshowregister={showRegister}
+                onHide={handleCloseLogin} 
+                onShowOrHideRegister={handleShowOrHideRegister}
+              />
             </div>
           </Col>
           <Col md={7}>

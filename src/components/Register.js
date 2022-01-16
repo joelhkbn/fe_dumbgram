@@ -4,11 +4,12 @@ import { Modal, Form, Button } from 'react-bootstrap'
 import Login from './Login'
 
 const Register = (props) => {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
   const [showLogin, setShowLogin] = useState(false)
   const handleClose = () => setShow(false)
+
   const handleShowLogin = () => {
-    setShowLogin((showLogin) => (showLogin = !showLogin))
+    setShowLogin((showLogin) => (showLogin = !showLogin));
   }
 
   const [state, setState] = useState({
