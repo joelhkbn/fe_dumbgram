@@ -12,16 +12,16 @@ const Landing = (props) => {
   const handleCloseLogin = () => setShowLogin(false)
 
   const handleShowOrHideRegister = () => {
-    setShowRegister((showRegister) => (!showRegister))
+    setShowRegister((showRegister) => !showRegister)
   }
 
   const handleShowLogin = () => {
-    setShowRegister((showRegister) => (false));
+    setShowRegister((showRegister) => false)
     setShowLogin((showLogin) => (showLogin = !showLogin))
   }
   const handleShowRegister = () => {
-    setShowRegister((showRegister) => (true));
-    setShowLogin((showLogin) => (showLogin = !showLogin));
+    setShowRegister((showRegister) => true)
+    setShowLogin((showLogin) => (showLogin = !showLogin))
   }
 
   return (
@@ -39,13 +39,13 @@ const Landing = (props) => {
               <button className='mt-4 mr-4' onClick={handleShowLogin}>
                 Login
               </button>
-              <a className='ml-5' onClick={handleShowRegister}>
+              <a className='ml-5' href='#' onClick={handleShowRegister}>
                 Register
               </a>
-              <Login 
-                show={showLogin}  
+              <Login
+                show={showLogin}
                 isshowregister={showRegister}
-                onHide={handleCloseLogin} 
+                onHide={handleCloseLogin}
                 onShowOrHideRegister={handleShowOrHideRegister}
               />
             </div>

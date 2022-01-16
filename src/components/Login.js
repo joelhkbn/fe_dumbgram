@@ -31,7 +31,7 @@ const Login = (props) => {
         <Form className='form m-4'>
           <h2>Login</h2>
           <Form.Group className='mb-3' controlId='formBasicEmail'>
-            <Form.Control type='email' placeholder='Email' />
+            <Form.Control type='text' placeholder='Email' />
           </Form.Group>
 
           <Form.Group className='mb-3' controlId='formBasicPassword'>
@@ -51,7 +51,7 @@ const Login = (props) => {
           <h2>Register</h2>
           <Form.Group className='mb-3' controlId='formBasicEmail'>
             <Form.Control
-              type='email'
+              type='text'
               placeholder='Email'
               value={state.email}
               name='email'
