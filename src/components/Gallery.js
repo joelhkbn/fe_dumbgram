@@ -19,8 +19,8 @@ function Gallery() {
         columnClassName='my-masonry-grid_column'
       >
         {importer.map((image, id) => (
-          <div>
-            <img src={image.url} alt='images' key={id} />
+          <div key={id}>
+            <img src={image.url} alt='images' />
           </div>
         ))}
       </Masonry>
