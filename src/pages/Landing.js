@@ -5,7 +5,6 @@ import Logo from '../assets/logoLarge.svg'
 import Gallery from '../components/Gallery'
 import Login from '../components/Login'
 import Register from '../components/Register'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 
 const Landing = (props) => {
   const [showLogin, setShowLogin] = useState(false)

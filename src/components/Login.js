@@ -5,7 +5,13 @@ import Register from './Register'
 
 const Login = (props) => {
   const [shows, setShows] = useState(false)
+
   const handleClose = () => setShows(false)
+
+  const [showRegister, setShowRegister] = useState(false)
+  const handleShowRegister = () => {
+    setShowRegister((showRegister) => (showRegister = !showRegister))
+  }
 
   return (
     <Modal
@@ -28,10 +34,10 @@ const Login = (props) => {
           Login
         </Button>
         <p>
-          Don't have an account? Click <a onClick={Register}>Here</a>
+          Don't have an account? Click <a onClick={handleShowRegister}>Here</a>
         </p>
       </Form>
-      <Register />
+      <Register show={showRegister} />
     </Modal>
   )
 }

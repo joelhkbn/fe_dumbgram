@@ -1,28 +1,28 @@
 import React from 'react'
-import Landing from './pages/Landing'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
 // import object dari react-router-dom
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 // import pages di sini
-import LandingPage from './pages/Landing'
+import Landing from './pages/Landing'
 import Feed from './pages/Index'
 import Explorer from './pages/Explorer'
 
-import
+// import private route di sini
+import PrivateRoute from './components/PrivateRoute'
 
 function App() {
   return (
-
     <Router>
       <Routes>
-        <Route exact path='/' element={<Feed />}/>
-        <Route exact path='/landing' element={<LandingPage />}/>
+        <Route exact path='/' element={<Landing />} />
+        <Route exact path='/' element={<PrivateRoute />}>
+          <Route exact path='/' element={<Feed />} />
+        </Route>
       </Routes>
     </Router>
-
 
     // <div>
     //   <Landing />

@@ -1,8 +1,10 @@
+import React from 'react'
 import { Outlet, Navigate } from 'react-router-dom'
 
 const PrivateRoute = ({ element: Component }) => {
   const isSignIn = false
-  return isSingIn ? <Outlet /> : <Navigate to='Landing.js' />
+
+  return isSignIn ? <Outlet /> : <Navigate to='/feed' />
 }
 
 export default PrivateRoute
