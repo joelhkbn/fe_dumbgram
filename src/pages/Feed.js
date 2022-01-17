@@ -2,15 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Row, Col, Form } from 'react-bootstrap'
 import Logo from '../assets/logoLarge.svg'
-import FeedLogo from '../assets/FeedHome.png'
-import ExploreLogo from '../assets/compas.png'
 import editLogo from '../assets/edit.png'
 import LogoutLogo from '../assets/logout.png'
 import Profile from '../assets/gallery/profile.jpg'
 import Gallery from '../components/Gallery'
 import cssModule from '../pages/Feed.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { BiSearchAlt } from 'react-icons/bi'
+
+import { Menu } from '../components/Menu'
+import { MenuList } from '../components/MenuList'
 
 const Feed = () => {
   return (
@@ -19,6 +19,7 @@ const Feed = () => {
         <Row>
           <Col xl={4}>
             <div>
+              <img src={editLogo} alt='edit' />
               <img className={cssModule.logo} src={Logo} alt='logo' />
               <div className={cssModule.profile}>
                 <img className={cssModule.img} src={Profile} alt='profile' />
@@ -56,48 +57,17 @@ const Feed = () => {
               </div>
 
               <div className={cssModule.jarak}>
-                <Link to={'/feed'}>
-                  <ul>
-                    <li>
-                      <img src={FeedLogo} alt='Feed' />
-                    </li>
-                    <li>
-                      <h5>Feed</h5>
-                    </li>
-                  </ul>
-                </Link>
-
-                <div className={cssModule.jarak}>
-                  <Link to={'/explore'}>
-                    <ul>
-                      <li>
-                        <img src={ExploreLogo} alt='Explore' />
-                      </li>
-                      <li>
-                        <h4>Explore</h4>
-                      </li>
-                    </ul>
-                  </Link>
-                </div>
-              </div>
-
-              <div className={cssModule.links}>
-                <Link to={'/'}>
-                  <img src={LogoutLogo} alt='Logout' />
-                  <h5>Logout</h5>
-                </Link>
+                <Menu title={'Menu'} menuObject={MenuList} />
               </div>
             </div>
           </Col>
           <Col xl={7} className={cssModule.leftBor}>
             <Form>
-              <div className={cssModule.search}>
-                <FontAwesomeIcon
-                  className={cssModule.searchIcon}
-                  icon={faSearch}
-                />
-                <input type='text' className='input' placeholder='Search' />
-                {/* <button className='search-button'></button> */}
+              <div className={cssModule.searchBox}>
+                <input type='text' placeholder='Search...' />
+                <i className={cssModule.searchIcon}>
+                  <BiSearchAlt />
+                </i>
               </div>
               <Gallery />
             </Form>
