@@ -3,6 +3,12 @@
   filter: drop-shadow(0px 3px 5px #a4a1d4);
 }
 
+.edited {
+  display: flex;
+  align-items: center;
+  margin-left: 320px;
+}
+
 .img {
   margin-top: 100px;
   width: 130px;

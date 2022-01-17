@@ -19,9 +19,9 @@ const Feed = () => {
         <Row>
           <Col xl={4}>
             <div>
-              <img src={editLogo} alt='edit' />
               <img className={cssModule.logo} src={Logo} alt='logo' />
               <div className={cssModule.profile}>
+                <img className={cssModule.edited} src={editLogo} alt='edit' />
                 <img className={cssModule.img} src={Profile} alt='profile' />
               </div>
               <div className={cssModule.info}>
